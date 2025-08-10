@@ -1,0 +1,162 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Root Colors */
+:root {
+    --mc-white: #ffffff;
+    --mc-yellow: #f3c623;
+    --mc-gray: #1a1a1a;
+    --mc-dark: #111;
+    --mc-border: #333;
+    --mc-hover: #2a2a2a;
+}
+
+/* Body Styling */
+.home-page-body {
+    background-color: var(--mc-gray);
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Layout */
+.home-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .home-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card Base */
+.content-card {
+    background-color: var(--mc-dark);
+    border: 2px solid var(--mc-border);
+    border-radius: 10px;
+    padding: 25px;
+    transition: transform 0.2s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Section Title */
+.section-title {
+    font-weight: 700;
+    font-size: 1.6em;
+    margin: 0 0 20px 0;
+    background: linear-gradient(90deg, var(--mc-white), var(--mc-white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid var(--mc-border);
+    padding-bottom: 10px;
+}
+
+/* News Styling */
+.news-article {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--mc-border);
+}
+
+.news-article:last-child {
+    border-bottom: none;
+}
+
+.news-article h3 {
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.news-article p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.news-meta {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Player List */
+#playtime-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.player-playtime-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--mc-border);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.player-playtime-item:hover {
+    background-color: var(--mc-hover);
+    transform: translateX(3px);
+}
+
+.playtime-rank {
+    font-weight: 700;
+    width: 40px;
+    color: var(--mc-cyan);
+}
+
+.playtime-player-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.playtime-skin-head {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    image-rendering: pixelated;
+}
+
+.player-profile-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.player-profile-link:hover {
+    color: var(--mc-cyan);
+}
+
+.playtime-duration {
+    font-weight: 700;
+    color: var(--mc-yellow);
+    margin-left: auto;
+}
+
+/* Loading Animation */
+#news-container:empty::before,
+#playtime-list-container:empty::before {
+    content: "Loading...";
+    display: block;
+    color: var(--mc-cyan);
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}

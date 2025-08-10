@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guilds - DeepMC</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/guilds.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="page-body">
+    <div id="navbar-placeholder"></div>
+    <main class="container">
+        <div class="page-header">
+            <h1 class="page-title">Guild Directory</h1>
+            <p class="page-subtitle">Discover and explore active guilds in the DeepMC community</p>
+        </div>
+        
+        <div class="guilds-grid" id="guilds-container">
+            <!-- Guilds will be loaded here by JS -->
+        </div>
+        
+        <div class="loading-state" id="loading-state">
+            <div class="loading-spinner"></div>
+            <p>Loading guilds...</p>
+        </div>
+        
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <div class="empty-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>No Guilds Found</h3>
+            <p>There are currently no guilds to display.</p>
+        </div>
+        
+        <div class="error-state" id="error-state" style="display: none;">
+            <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <h3>Error Loading Guilds</h3>
+            <p>Unable to load guild data. Please try refreshing the page.</p>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/js/main.js"></script>
+    <script src="/js/guilds.js"></script>
+</body>
+</html>

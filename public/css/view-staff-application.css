@@ -1,0 +1,259 @@
+/* View Staff Application Page Body */
+.page-body {
+    background-color: #1a1a1a;
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin-bottom: 20px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.breadcrumb a {
+    color: #3182ce;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* Applications Table Card */
+.applications-table-card {
+    background-color: #2d3748;
+    border-radius: 8px;
+    border: 1px solid #4a5568;
+    overflow: hidden;
+}
+
+.applications-table-header {
+    padding: 20px;
+    border-bottom: 1px solid #4a5568;
+}
+
+.applications-table-header h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.3em;
+}
+
+.applications-count {
+    color: #888;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+/* DataTables Overrides */
+.dataTables_wrapper {
+    padding: 20px;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 20px;
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+    color: #ccc;
+    font-weight: 500;
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+    background-color: #1a202c;
+    border: 1px solid #4a5568;
+    color: #eee;
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+#applications-table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    background-color: transparent;
+}
+
+#applications-table thead th {
+    color: #a0aec0;
+    border-bottom: 2px solid #4a5568;
+    background-color: #2d3748;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+}
+
+#applications-table tbody td {
+    color: #eee;
+    padding: 15px;
+    border-bottom: 1px solid #4a5568;
+    vertical-align: middle;
+}
+
+#applications-table tbody tr:hover {
+    background-color: #374151;
+}
+
+#applications-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Player Cell */
+.player-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-skin {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-name {
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.player-hours {
+    color: #888;
+    font-size: 0.85em;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 80px;
+}
+
+.status-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-accepted {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Action Buttons */
+.action-btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.85em;
+    transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+.view-btn {
+    background-color: #3182ce;
+}
+
+/* Pagination */
+.dataTables_paginate .paginate_button {
+    color: #ccc !important;
+    border: 1px solid #4a5568;
+    background: #2d3748;
+    margin: 0 2px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.dataTables_paginate .paginate_button.current,
+.dataTables_paginate .paginate_button:hover {
+    background: #3182ce !important;
+    color: #fff !important;
+    border-color: #3182ce !important;
+}
+
+.dataTables_paginate .paginate_button.disabled {
+    color: #666 !important;
+    background: #1a202c !important;
+}
+
+.dataTables_info {
+    color: #a0aec0;
+}
+
+/* Loading State */
+.loading-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+    padding: 40px;
+}
+
+/* No Applications Notice */
+.no-applications-notice {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
+
+.no-applications-notice i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.no-applications-notice h3 {
+    margin: 0 0 10px 0;
+    color: #ccc;
+}
+
+.no-applications-notice p {
+    margin: 0;
+}

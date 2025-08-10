@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friends - DeepMC</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/my-friends.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="page-body">
+    <div id="navbar-include"></div>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">
+                <i class="fas fa-user-friends"></i>
+                Friends <span class="friends-count" id="friends-count">(0)</span>
+            </h1>
+        </div>
+        
+        <div class="loading-state" id="loading-state">
+            <div class="loading-spinner"></div>
+            <p>Loading friends...</p>
+        </div>
+        
+        <div class="friends-table-container" id="friends-container" style="display: none;">
+            <table class="friends-table">
+                <thead>
+                    <tr>
+                        <th class="avatar-col"></th>
+                        <th class="username-col">Username</th>
+                        <th class="since-col">Since</th>
+                        <th class="last-seen-col">Last Seen</th>
+                        <th class="status-col">Status</th>
+                        <th class="actions-col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="friends-table-body">
+                    <!-- Friends will be loaded here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <div class="empty-icon"><i class="fas fa-user-friends"></i></div>
+            <h3>No Friends Yet</h3>
+            <p>You haven't added any friends yet. Start connecting with other players!</p>
+        </div>
+        
+        <div class="error-state" id="error-state" style="display: none;">
+            <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <h3>Error Loading Friends</h3>
+            <p>Unable to load your friends list. Please try refreshing the page.</p>
+        </div>
+    </div>
+    
+    <!-- Remove Friend Confirmation Modal -->
+    <div class="modal-overlay" id="remove-modal" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-minus"></i> Remove Friend</h3>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to remove <strong id="remove-friend-name"></strong> from your friends list?</p>
+                <p class="warning-text">This action cannot be undone.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-cancel" onclick="closeRemoveModal()">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+                <button class="btn btn-remove" id="confirm-remove-btn">
+                    <i class="fas fa-trash"></i> Remove Friend
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer-include"></div>
+    <script src="../js/my-friends.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Simple JS include for navbar and footer
+        fetch('../html/partials/navbar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar-include').innerHTML = html;
+            });
+        fetch('../html/partials/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-include').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

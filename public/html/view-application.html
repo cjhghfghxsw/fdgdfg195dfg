@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Application - DeepMC</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/view-application.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-body">
+    <div id="navbar-placeholder"></div>
+    
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="/staff/applications">Applications Category</a> / 
+            <a href="#" id="breadcrumb-category-link">Application #17</a> / 
+            <span id="breadcrumb-app-id">Application #232</span>
+        </div>
+
+        <div id="application-content">
+            <div class="loading-text">
+                <i class="fas fa-spinner fa-spin"></i> Loading application...
+            </div>
+        </div>
+    </main>
+
+    <!-- Response Modal -->
+    <div id="response-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modal-title">Respond to Application</h2>
+            <form id="response-form">
+                <input type="hidden" id="modal-action" name="action">
+                
+                <label for="response-text">Response</label>
+                <textarea id="response-text" name="response" 
+                    placeholder="Provide feedback to the applicant..." 
+                    required rows="4"></textarea>
+                
+                <div class="modal-actions">
+                    <button type="button" id="cancel-response-btn" class="modal-btn cancel-btn">Cancel</button>
+                    <button type="submit" id="submit-response-btn" class="modal-btn"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    
+    <script src="/js/main.js"></script>
+    <script src="/js/view-application.js"></script>
+</body>
+</html>
